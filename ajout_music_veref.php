@@ -7,7 +7,7 @@
     <body>
         <h1></h1><br><br>
         <?php
-        if (!empty($_POST['name_track']) OR !empty($_POST['filename_track'])) {
+        if (!empty($_POST['name_track'])) {
         require 'connect.php';
         try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
@@ -27,7 +27,7 @@
             die('echec :' . $e->getMessage());
         }
         }else {
-            echo 'Les deux libellés doivent être saisies !';
+            echo 'Le libellé doive être saisie !';
             echo "<a href='ajout_music.php'>Retour à l'insersion</a>";
         }
         ?>
