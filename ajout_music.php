@@ -7,7 +7,7 @@
 
     <h1>ajout user</h1>
 
-    <form action="ajoutSoiree.php" method="post" >
+    <form action="ajout_music_veref.php" method="post" >
 
         <label for="titre">Titre :</label>
         <input type="text" name='titre' required><br>
