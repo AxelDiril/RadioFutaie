@@ -14,7 +14,7 @@
         <label for="fichier">Nom du fichier :</label>
         <input type="file" name='fichier' accept="audio/wav, audio/mpeg, audio/ogg" ><br><br>
 
-        <input type="submit" value="Rechercher">
+        <input type="submit" value="Inserer">
         
     </form>
     
