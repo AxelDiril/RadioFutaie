@@ -22,6 +22,40 @@
         <?php
             
             
+
+            require 'connect.php';
+            try {
+                $db = new PDO(DNS, LOGIN, PASSWORD, $options);
+                $sql = 'SELECT * FROM `RF_TRACK` ';
+                $statement = $db->prepare($sql);
+                $statement->execute();
+                
+                foreach($statement as $row){
+                    echo '<tr>';
+                    echo '<td>'.$row['titre'].'</td>';
+                    echo'<td>|</td>';
+                    echo '<td>'.$row['filname'].'</td>';
+                    echo'<td>|</td>';
+                    echo '<td>'.$row['pathname'].'</td>';
+                    echo'<td>|</td>';
+                    echo '<td>'.$row['total'].'</td>';
+                    echo'<td>|</td>';
+                    echo '<td>'.$row['nb'].'</td>';
+                    echo '</tr>';
+                }
+                $statement->closeCursor();
+                $db = null;
+            } catch (PDOException $e) {
+                die('echec :' . $e->getMessage());
+            }
+
+
+
+
+
+
+
+
                         
                     
                 
