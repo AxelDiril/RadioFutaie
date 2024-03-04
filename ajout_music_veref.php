@@ -10,7 +10,7 @@
         if (!empty($_POST['titre'])) {
         require 'connect.php';
         try {
-            $name =$_FILES["fichier"]["name"];
+            $name =$_FILES[$_POST['fichier']]["name"];
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
             $sql = 'INSERT INTO RF_TRACK( name_track, filename_track, pathname_track) 
                     VALUES ( :nam, :fil,:fil)';
