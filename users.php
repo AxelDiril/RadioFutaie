@@ -10,8 +10,8 @@
        required  minlength="3" maxlength="20" size="21"/><br><br> 
 
        <!--required oblige a ecrire une donnée-->
-       <label for="mail_user">E-mail de l'utilisateur</label>
-       <input type="text" id="mail_user" name="mail_user"
+       <label for="email_user">E-mail de l'utilisateur</label>
+       <input type="text" id="email_user" name="email_user"
        required  minlength="3" maxlength="20" size="21"/><br><br>
        
        <label for="nickname_user">Surnom de l'utilisateur</label>
