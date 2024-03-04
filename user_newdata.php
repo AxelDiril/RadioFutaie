@@ -4,7 +4,7 @@
         <title></title>
     </head>
     <body>
-        <form action="user_insert.php" method="POST"> 
+        <form action="user_update.php" method="POST"> 
 
        <!--required oblige a ecrire une donnée-->
        <label for="email_user">E-mail de l'utilisateur</label>
