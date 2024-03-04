@@ -19,7 +19,7 @@
                 <th>|</th>
                 <th>nb</th>
         </tr>
-        
+
         <?php
             require 'connect.php';
             try {
@@ -30,15 +30,15 @@
                 
                 foreach($statement as $row){
                     echo '<tr>';
-                    echo '<td>'.$row['titre'].'</td>';
+                    echo '<td>'.$row['name_track'].'</td>';
                     echo'<td>|</td>';
-                    echo '<td>'.$row['filname'].'</td>';
+                    echo '<td>'.$row['filname_track'].'</td>';
                     echo'<td>|</td>';
-                    echo '<td>'.$row['pathname'].'</td>';
+                    echo '<td>'.$row['pathname_track'].'</td>';
                     echo'<td>|</td>';
-                    echo '<td>'.$row['total'].'</td>';
+                    echo '<td>'.$row['total_votes'].'</td>';
                     echo'<td>|</td>';
-                    echo '<td>'.$row['nb'].'</td>';
+                    echo '<td>'.$row['nb_votes'].'</td>';
                     echo '</tr>';
                 }
                 $statement->closeCursor();
