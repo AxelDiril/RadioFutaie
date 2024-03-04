@@ -56,7 +56,7 @@ td
                     echo '</tr>';
                 }
              
-            echo '<h1> La liste des playlists '. "</h1><br>";
+            echo '<h1> Liste des playlists '. "</h1><br>";
             echo '<h2> Nombre : '.$statement->rowCount().'</h2><br>';
             
             $statement->closeCursor();

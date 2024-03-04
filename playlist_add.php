@@ -4,11 +4,10 @@
         <title></title>
     </head>
     <body>
-       
-        <form action="playlist_list.php" method="post">
-            
-            <label for="id_play">Identifiant de la playlist : </label>
-            <input type="text" id="id_play" name="id_play" required><br><br>
+
+        <h1>Ajout d'une playlist </h1>
+
+        <form action="playlist_insert.php" method="post">
 
             <label for='titre'>Titre : </label>
             <input type='text' id='titre' name='titre' minlength="1" maxlength="255" size='50' required><br><br> 
