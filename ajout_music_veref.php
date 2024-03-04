@@ -14,8 +14,9 @@
             $sql = 'INSERT INTO RF_TRACK( name_track, filename_track, pathname_track) 
                     VALUES ( :nam, :fil,:fil)';
             $statement = $db->prepare($sql);
+            $name =$_FILES["fichier"]["name"];
             $statement->bindParam('nam', $_POST['titre']);
-            $statement->bindParam('fil', $_POST['fichier']);
+            $statement->bindParam('fil', $name);
             $statement->execute();
 
             echo '<label>La musique : ' . $_POST['titre'] . ' a bien été ajoutée</label><br><br>';
