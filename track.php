@@ -22,25 +22,6 @@
         <?php
             
             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-                foreach($track as $row){
-                    if(is_array($row)){
                         echo '<tr>';
                         echo '<td>'.$row['titre'].'</td>';
                         echo'<td>|</td>';
@@ -52,8 +33,8 @@
                         echo'<td>|</td>';
                         echo '<td>'.$row['nb'].'</td>';
                         echo '</tr>';
-                    }
-                }
+                    
+                
             
         ?>
     </table>
