@@ -19,14 +19,12 @@
                 <th>|</th>
                 <th>nb</th>
         </tr>
+        
         <?php
-            
-            
-
             require 'connect.php';
             try {
                 $db = new PDO(DNS, LOGIN, PASSWORD, $options);
-                $sql = 'SELECT * FROM `RF_TRACK` ';
+                $sql = 'SELECT * FROM RF_TRACK ';
                 $statement = $db->prepare($sql);
                 $statement->execute();
                 
@@ -47,18 +45,7 @@
                 $db = null;
             } catch (PDOException $e) {
                 die('echec :' . $e->getMessage());
-            }
-
-
-
-
-
-
-
-
-                        
-                    
-                
+            }      
             
         ?>
     </table>
