@@ -7,7 +7,7 @@
     <body>
         <h1></h1><br><br>
         <?php
-        if (!empty($_POST['titre'])) {
+        if (empty($_POST['titre'])) {
         require 'connect.php';
         try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
