@@ -32,7 +32,7 @@
                     echo '<tr>';
                     echo '<td>'.$row['name_track'].'</td>';
                     echo'<td>|</td>';
-                    echo '<td>'.$row['filname_track'].'</td>';
+                    echo '<td>'.$row['filename_track'].'</td>';
                     echo'<td>|</td>';
                     echo '<td>'.$row['pathname_track'].'</td>';
                     echo'<td>|</td>';
