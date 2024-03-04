@@ -4,6 +4,9 @@
     <title>ajout</title>
 </head>
 <body>
+
+    <h1>track</h1>
+    
     <form action="ajoutSoiree.php" method="post" >
 
         <label for="titre">Titre :</label>
