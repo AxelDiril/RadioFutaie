@@ -12,7 +12,7 @@
         <label for="titre">Titre :</label>
         <input type="text" name='titre' required><br>
         <label for="fichier">Nom du fichier :</label>
-        <input type="file" name='fichier' accept="audio/flac, audio/mpeg, audio/ogg" ><br><br>
+        <input type="file" name='fichier' accept="audio/wav, audio/mpeg, audio/ogg" ><br><br>
 
         <input type="submit" value="Rechercher">
         
