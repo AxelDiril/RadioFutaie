@@ -8,7 +8,8 @@
         
 
     <table>
-        <th>titre</th>
+        <tr>
+            <th>titre</th>
                 <th>|</th>
                 <th>filname</th>
                 <th>|</th>
@@ -19,21 +20,24 @@
                 <th>nb</th>
         </tr>
         <?php
-            if (!empty($level) && is_array($level)){
             
-                foreach($level as $item){
-                    if(is_array($item)){
+            
+                foreach($track as $row){
+                    if(is_array($row)){
                         echo '<tr>';
-                        echo '<td>'.esc($item['label']).'</td>';
+                        echo '<td>'.$row['titre'].'</td>';
                         echo'<td>|</td>';
-                        echo '<td>'.esc($item['comment']).'</td>';
+                        echo '<td>'.$row['filname'].'</td>';
+                        echo'<td>|</td>';
+                        echo '<td>'.$row['pathname'].'</td>';
+                        echo'<td>|</td>';
+                        echo '<td>'.$row['total'].'</td>';
+                        echo'<td>|</td>';
+                        echo '<td>'.$row['nb'].'</td>';
                         echo '</tr>';
                     }
                 }
-            }
-            else{
-                echo 'Aucun level trouvé.';
-            }
+            
         ?>
     </table>
         <br>
