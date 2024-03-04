@@ -12,7 +12,7 @@
         try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
             $sql = 'INSERT INTO RF_TRACK( name_track, filename_track, pathname_track) 
-                    VALUES ( :nam, :fil,:fil)';
+                    VALUES ( :nam, :fil,"music/":fil)';
             $statement = $db->prepare($sql);
             $statement->bindParam('nam', $_POST['titre']);
             $statement->bindParam('fil', $_POST['fichier']);
