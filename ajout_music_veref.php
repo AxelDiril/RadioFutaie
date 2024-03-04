@@ -12,11 +12,10 @@
         try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
             $sql = 'INSERT INTO RF_TRACK( name_track, filename_track, pathname_track) 
-                    VALUES ( :nam, :fil, :pass)';
+                    VALUES ( :nam, :fil, "music/":fil)';
             $statement = $db->prepare($sql);
             $statement->bindParam('nam', $_POST['name_track']);
             $statement->bindParam('fil', $_POST['filename_track']);
-            $statement->bindParam('pass', "music/".$_POST['filename_track']);
             $statement->execute();
 
             echo '<label>La musique : ' . $_POST['titre'] . ' a bien été ajoutée</label><br><br>';
