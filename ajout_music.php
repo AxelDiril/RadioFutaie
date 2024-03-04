@@ -5,16 +5,14 @@
 </head>
 <body>
 
-    <h1>track</h1>
-    
+    <h1>ajout user</h1>
+
     <form action="ajoutSoiree.php" method="post" >
 
         <label for="titre">Titre :</label>
         <input type="text" name='titre' required><br>
         <label for="fichier">Nom du fichier :</label>
-        <input type="file" name='fichier' required><br>
-        <label for="path">pathname :</label>
-        <input type="text" name='path'  required><br>
+        <input type="file" name='fichier' accept="audio/flac, audio/mp3, audio/ogg" required><br>
 
         <input type="submit" value="Rechercher">
         
