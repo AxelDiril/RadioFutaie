@@ -5,15 +5,14 @@
     </head>
     <body>
         <form action="listUser.php" method="POST">
-       <label for="libCourt">libelle court</label>
-
-<input type="text" id="libCourt" name="libCourt"
+       <label for="id_User">Identifiant de l'utilisateur</label>
+       <input type="text" id="id_User" name="id_User"
        required  minlength="4" maxlength="20" size="21"/><br><br> 
-<!--required oblige a ecrire une donnée-->
-<label for="libLong">libelle long</label>
 
-<textarea id="libLong" placeholder="test" name="libLong" rows="6" cols="30">
-
+       <!--required oblige a ecrire une donnée-->
+       <label for="mail_User">Identifiant de l'utilisateur</label>
+       <input type="text" id="mail_User" name="mail_User"
+       required  minlength="4" maxlength="20" size="21"/><br><br> 
 </textarea>
 
  <div>
