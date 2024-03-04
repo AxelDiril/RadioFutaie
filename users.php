@@ -4,35 +4,36 @@
         <title></title>
     </head>
     <body>
-        <form action="user_list.php" method="POST">
-       <label for="id_User">Identifiant de l'utilisateur</label>
-       <input type="text" id="id_User" name="id_User"
+        <form action="user_insert.php" method="POST">
+       <label for="id_user">Identifiant de l'utilisateur</label>
+       <input type="text" id="id_user" name="id_user"
        required  minlength="3" maxlength="20" size="21"/><br><br> 
 
        <!--required oblige a ecrire une donnée-->
-       <label for="mail_User">E-mail de l'utilisateur</label>
-       <input type="text" id="mail_User" name="mail_User"
+       <label for="mail_user">E-mail de l'utilisateur</label>
+       <input type="text" id="mail_user" name="mail_user"
        required  minlength="3" maxlength="20" size="21"/><br><br>
        
-       <label for="nickname_User">surnom de l'utilisateur</label>
-       <input type="text" id="nickname_User" name="nickname_User"
+       <label for="nickname_user">Surnom de l'utilisateur</label>
+       <input type="text" id="nickname_user" name="nickname_user"
        required  minlength="3" maxlength="20" size="21"/><br><br>
 
-       <label for="firstname_User">Prénom de l'utilisateur</label>
-       <input type="text" id="firstname_User" name="firstname_User"
+       <label for="firstname_user">Nom de l'utilisateur</label>
+       <input type="text" id="firstname_user" name="firstname_user"
        required  minlength="3" maxlength="20" size="21"/><br><br>
 
-       <label for="lastname_User">nom de l'utilisateur</label>
-       <input type="text" id="lastname_User" name="lastname_User"
+       <label for="lastname_user">Prénom de l'utilisateur</label>
+       <input type="text" id="lastname_user" name="lastname_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
     
-       <label for="password_User">mot de passe de l'utilisateur</label>
-       <input type="text" id="password_User" name="password_User"
+       <label for="password_user">mot de passe de l'utilisateur</label>
+       <input type="text" id="password_user" name="password_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
     
-       <label for="phone_User">téléphone de l'utilisateur</label>
-       <input type="text" id="phone_User" name="phone_User"
+       <label for="phone_user">téléphone de l'utilisateur</label>
+       <input type="text" id="phone_user" name="phone_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
+
     </textarea>
 
 
