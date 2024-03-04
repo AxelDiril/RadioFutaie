@@ -7,6 +7,28 @@
         <form action="user_update.php" method="POST"> 
 
        <!--required oblige a ecrire une donnée-->
+ 
+    <label for="lastname_user">selectionnez la personne a modifié :</label>
+        <select name="lastname_user" id="lastname_user">
+        <option value=""> choisissez la personne a modifié</option>
+       <?php
+       require 'connect.php';
+       
+       
+       
+            $db = new PDO(DNS, LOGIN, PASSWORD, $options);
+            $sql = 'SELECT lastname_user from RF_USER';
+            $statement = $db->prepare($sql);
+            $statement->execute();
+            foreach ($statement as $row) {
+                echo '<option value="'.$row['lastname_user'].'">'.$row['lastname_user'].'</option>';
+            }
+
+        ?> 
+        </select>
+
+  </select>
+</form>
        <label for="email_user">E-mail de l'utilisateur</label>
        <input type="email" id="email_user" name="email_user"
        required  minlength="3" maxlength="20" size="21"/><br><br>
@@ -31,15 +53,9 @@
        <input type="text" id="phone_user" name="phone_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
 
-    </textarea>
+        <button type="submit">Envoyer</button>
 
-
- <div>
-    <button type="submit">Envoyer</button>
-            
-  </div>
-
-        </form>
+    </form>
         <?php
 
         ?>
