@@ -16,7 +16,8 @@
             $statement = $db->prepare($sql);
             $statement->bindParam('nam', $_POST['titre']);
             $statement->bindParam('fil', $_POST['fichier']);
-            $statement->bindParam('pass', "music/".$_POST['fichier']);
+            $pas="music/".$_POST['fichier'];
+            $statement->bindParam('pass', $pas);
             $statement->execute();
 
             echo '<label>La musique ' . $_POST['titre'] . ' a bien été ajoutée</label><br><br>';
