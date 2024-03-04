@@ -19,7 +19,7 @@
             $pas="music/".$_POST['fichier'];
             $statement->bindParam('pass', $pas);
             $origine = $_FILES[$_POST['fichier']]['tmp_name'];
-            $destination = '../music/'.$_FILES[$_POST['fichier']]['name'];
+            $destination = '~/music/'.$_FILES[$_POST['fichier']]['name'];
             move_uploaded_file($origine,$destination);
             $statement->execute();
 
