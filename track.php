@@ -39,6 +39,8 @@
                     echo '<td>'.$row['total_votes'].'</td>';
                     echo'<td>|</td>';
                     echo '<td>'.$row['nb_votes'].'</td>';
+                    echo'<td>|</td>';
+                    echo '<td><a href="user_delete.php?id='.$row['id_user'].'">Supprimer</a><br>';
                     echo '</tr>';
                 }
                 $statement->closeCursor();
