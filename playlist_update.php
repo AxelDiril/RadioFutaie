@@ -17,7 +17,8 @@
 
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
             $sql = 'UPDATE RF_PLAYLIST (name_playlist, datetime_playlist)
-                    VALUES (:titre, :date)';
+                    VALUES (:titre, :date'
+                    WHERE id_user=:id)';
                 
             $statement = $db->prepare($sql);
             $statement->bindParam('titre',$_POST['titre']);
