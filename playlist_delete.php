@@ -10,23 +10,20 @@
         require 'connect.php';
 
         if(!empty($_GET['id'])){
+
             $db = new PDO(DNS,LOGIN,PASSWORD,$options);
-            $sql = "DELETE FROM RF_USER WHERE id_user = :id";
+            $sql = "DELETE FROM RF_PLAYLIST WHERE id_playlist = :id";
             $statement = $db->prepare($sql);
             
             $statement->bindParam('id', $_GET['id']);
-            
-            //Condition ternaire
-            //$var = (condition)?valeurVraie:valeurFaux
-            
             $statement->execute();
             
-            echo "L'utilisateur a bien été supprimé.";
+            echo "La playlist a bien été supprimée.";
 
             }
             else{
 
-                echo "Aucun utilisateur a été choisi.";
+                echo "Aucune playlist a été choisie .";
 
             }
         
