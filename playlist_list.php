@@ -55,7 +55,7 @@ td
                     echo '<td>'.$row['name_playlist'].'</td>';
                     echo '<td>'.$row['datetime_playlist'].'</td>';
                     echo '<td><a href="playlist_delete.php?id='.$row['id_playlist'].'">Supprimer</a><br>';
-                    echo '<td><a href="playlist_update.php?id='.$row['id_playlist'].'">Modifier</a><br>';
+                    echo '<a href="playlist_update.php?id='.$row['id_playlist'].'">Modifier</a><br>';
                     echo '</tr>';
                 }
              
