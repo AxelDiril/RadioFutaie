@@ -7,20 +7,24 @@
     <body>
         <h1></h1><br><br>
         <?php
-        if (!empty($_POST[''])) {
+        if (!empty($_POST['idlogin']) and !empty($_POST['idpassword'])) {
         require 'connect.php';
         try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
-            $sql = '';
+            $sql = 'SELECT password_user , nickname_user 
+                    FROM RF_USER
+                    WHERE nickname_user= :nck';
             $statement = $db->prepare($sql);
-            $statement->bindParam('nam', $_POST['titre']);
-            $statement->bindParam('fil', $_POST['fichier']);
-            
+            $statement->bindParam('nck', $_POST['idlogin']);
             
             $statement->execute();
             
-            echo '<label>La musique ' . $_POST['titre'] . ' a bien été ajoutée</label><br><br>';
-            echo "<a href='ajout_music.php'>Retour à l'index</a>";
+            if(password_verify($_POST['idpassword'], $row['idpassword'])){
+                echo 'Connexion réussie';
+            }
+            else {
+                echo 'Identifiant ou mot de passe incorrect';
+            }
             
             $statement->closeCursor();
             $db = null;
