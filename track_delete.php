@@ -11,7 +11,7 @@
 
         if(!empty($_GET['id'])){
             $db = new PDO(DNS,LOGIN,PASSWORD,$options);
-            $sql = "DELETE FROM RF_TRACK WHERE id_user = :id";
+            $sql = "DELETE FROM RF_TRACK WHERE id_track = :id";
             $statement = $db->prepare($sql);
             
             $statement->bindParam('id', $_GET['id']);
