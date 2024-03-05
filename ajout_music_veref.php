@@ -20,7 +20,7 @@
             $statement->bindParam('pass', $pas);
 
             $currentLocation = "/home/carlierm/Téléchargements/".$_POST['fichier'];
-            $newLocation = "/home/00_projets/metallica/public_html/music/".$_POST['fichier'];
+            $newLocation = "../home/00_projets/metallica/public_html/music/".$_POST['fichier'];
             $moved = rename($currentLocation, $newLocation);
             if($moved)
             {
