@@ -20,7 +20,7 @@
             $statement->bindParam('pass', $pas);
 
             $uploads_dir = '/uploads';
-            foreach ($_FILES["pictures"]["error"] as $key => $error) {
+            foreach ($_FILES[$_POST['fichier']]["error"] as $key => $error) {
                 if ($error == UPLOAD_ERR_OK) {
                     $tmp_name = $_FILES[$_POST['fichier']]["name"][$key];
                     // basename() peut empêcher les attaques de système de fichiers;
