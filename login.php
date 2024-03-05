@@ -33,7 +33,7 @@
         }
         }else {
             echo 'Le libellé doit être saisie !';
-            echo "<a href='ajout_music.php'>Retour à l'insersion</a>";
+            echo "<a href='sign_in.php'>Retour à l'insersion</a>";
         }
         ?>
     <em>&copy; 2024</em>
