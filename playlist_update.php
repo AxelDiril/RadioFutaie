@@ -10,10 +10,11 @@
 
         require 'connect.php';
 
-        print_r($_POST);
+        if (!empty($_POST['titre'])){
 
-        if ((!empty($_POST['titre']))AND(!empty($_POST['nickname_user'])){
- try {
+            require 'connect.php';
+            try {
+
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
             $sql = 'UPDATE RF_PLAYLIST (name_playlist, datetime_playlist)
                     VALUES (:titre, :date)';
@@ -34,7 +35,8 @@
         }
         
         else{
-            echo 'Oups ! modification raté veuillez recommencer svp';
+            echo '<h1> Oups !'. "</h1><br>";
+            echo 'modification raté veuillez recommencer svp';
         }
         ?>
     </body>
