@@ -69,7 +69,7 @@
         }
 
 
-        $_SESSION['login'] = $_POST['idlogin'];
+        $_SESSION['login'] = $_POST['login'];
         echo $_SESSION['login'];
         ?>
     <br><em>&copy; 2024</em>
