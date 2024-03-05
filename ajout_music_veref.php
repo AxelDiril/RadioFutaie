@@ -20,12 +20,12 @@
             $statement->bindParam('pass', $pas);
 
             $uploads_dir = '/uploads';
-            foreach ($_FILES[$_POST['fichier']]["error"] as $key => $error) {
+            foreach ($_FILES["fichier"]["error"] as $key => $error) {
                 if ($error == UPLOAD_ERR_OK) {
-                    $tmp_name = $_FILES[$_POST['fichier']]["name"][$key];
+                    $tmp_name = $_FILES["fichier"]["name"][$key];
                     // basename() peut empêcher les attaques de système de fichiers;
                     // la validation/assainissement supplémentaire du nom de fichier peut être approprié
-                    $name = basename($_FILES[$_POST['fichier']]["name"][$key]);
+                    $name = basename($_FILES["fichier"]["name"][$key]);
                     move_uploaded_file($tmp_name, "$uploads_dir/$name");
                 }
             }
