@@ -28,9 +28,9 @@
             }
 
             if ($row['code_role']=='U'){
-                echo 'est un utilisateur ';
+                echo ' est un utilisateur ';
             }else{
-                echo 'est un admin';
+                echo ' est un admin';
             }
 
 
