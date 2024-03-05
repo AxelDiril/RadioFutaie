@@ -67,6 +67,10 @@
             echo 'Le libellé doit être saisie !';
             echo "<a href='sign_in.php'>Retour à l'insersion</a>";
         }
+
+
+        $_SESSION['login'] = $_POST['idlogin'];
+        echo $_SESSION['login'];
         ?>
     <br><em>&copy; 2024</em>
 </body>

@@ -15,6 +15,6 @@
     </form>
 
     <?php
-
+        session_start();
     ?>
 </body>
