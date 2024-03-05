@@ -10,7 +10,7 @@
 
 require 'connect.php';
         print_r($_POST);
-        if ((!empty($_POST['email_user']))AND(!empty($_POST['nickname_user']))AND(!empty($_POST['lastname_user']))AND(!empty($_POST['password_user']))AND(!empty($_POST['phone_user']))AND(!empty($_POST['id_user']))){
+        if ((!empty($_POST['email_user']))AND(!empty($_POST['nickname_user']))AND(!empty($_POST['lastname_user']))AND(!empty($_POST['password_user']))AND(!empty($_POST['phone_user']))){
             try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
             $sql = 'UPDATE RF_USER
@@ -22,7 +22,6 @@ require 'connect.php';
             $statement->bindParam('prenom',$_POST['lastname_user']);
             $statement->bindParam('mdp',$_POST['password_user']);
             $statement->bindParam('tel',$_POST['phone_user']);
-            $statement->bindParam('id',$_POST['id_user']);
             $statement->execute();
             
            echo  "l'utilisateur '" .$_POST['lastname_user']. " a bien été modifié <br><br>";

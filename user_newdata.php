@@ -53,7 +53,7 @@
        <input type="text" id="phone_user" name="phone_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
 
-        <button type="submit">Envoyer</button>
+        <input type="submit">Envoyer</input>
 
     </form>
         <?php
