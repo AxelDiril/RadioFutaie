@@ -44,11 +44,11 @@
 
             }else{
 
-                echo "<a href='track.php'>Pour voir toutes les musiques</a>";
-                echo "<a href='ajout_music.php'>Pour rajouter des musiques</a>";
-                echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a>";
-                echo "<a href='playlist_add.php'>Pour rajouter des playlists</a>";
-                echo "<a href='user_list.php'>Pour voir tous les utisateurs</a>";
+                echo "<br><a href='track.php'>Pour voir toutes les musiques</a>";
+                echo "<br><a href='ajout_music.php'>Pour rajouter des musiques</a>";
+                echo "<br><a href='playlist_list.php'>Pour voir toutes les playlists</a>";
+                echo "<br><a href='playlist_add.php'>Pour rajouter des playlists</a>";
+                echo "<br><a href='user_list.php'>Pour voir tous les utisateurs</a>";
                 
 
             }
