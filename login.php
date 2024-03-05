@@ -7,7 +7,7 @@
     <body>
         <h1></h1><br><br>
         <?php
-       // if (!empty($_POST['idlogin']) or !empty($_POST['idpassword'])) {
+       // if (!empty($_POST['login']) or !empty($_POST['password'])) {
         require 'connect.php';
         try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
@@ -15,11 +15,11 @@
                     FROM RF_USER
                     WHERE nickname_user= :nck';
             $statement = $db->prepare($sql);
-            $statement->bindParam('nck', $_POST['idlogin']);
+            $statement->bindParam('nck', $_POST['login']);
             
             $statement->execute();
             
-            if(password_verify($_POST['idpassword'], $row['password'])){
+            if(password_verify($_POST['password'], $row['password'])){
                 echo 'Connexion réussie';
             }
             else {
