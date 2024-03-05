@@ -7,7 +7,7 @@
     <body>
         <h1></h1><br><br>
         <?php
-        if (!empty($_POST['idlogin']) or !empty($_POST['idpassword'])) {
+       // if (!empty($_POST['idlogin']) or !empty($_POST['idpassword'])) {
         require 'connect.php';
         try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
@@ -31,10 +31,10 @@
         } catch (PDOException $e) {
             die('echec :' . $e->getMessage());
         }
-        }else {
+        /*}else {
             echo 'Le libellé doit être saisie !';
             echo "<a href='sign_in.php'>Retour à l'insersion</a>";
-        }
+        }*/
         ?>
     <em>&copy; 2024</em>
 </body>
