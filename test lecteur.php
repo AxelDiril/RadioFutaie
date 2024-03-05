@@ -1,8 +1,8 @@
 <?php
- */
+
 require_once 'MP3/Playlist/Common.php';
 
- */
+
 class MP3_Playlist_M3U extends MP3_Playlist_Common
 {
     // {{{ Object Properties
