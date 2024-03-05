@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>titre 2</title>
+    </head>
+    <body>
+        <h1>Utilisateur</h1><br>bienvenue sur Radio Futaie<br>
+        <?php
+
+require 'connect.php';
+        print_r($_POST);
+        if ((!empty($_POST['email_user']))AND(!empty($_POST['nickname_user']))AND(!empty($_POST['lastname_user']))AND(!empty($_POST['password_user']))AND(!empty($_POST['phone_user']))){
+            try {
+            $db = new PDO(DNS, LOGIN, PASSWORD, $options);
+            $sql = 'INSERT INTO RF_USER(email_user, nickname_user, firstname_user, lastname_user, password_user, phone_user, code_role)
+                    Values(:mail, :surnom, :nom, :prenom, :mdp, :tel, "U" )';
+            $statement = $db->prepare($sql);
+            $statement->bindParam('mail',$_POST['email_user']);
+            $statement->bindParam('surnom',$_POST['nickname_user']);
+            $statement->bindParam('nom',$_POST['firstname_user']);
+            $statement->bindParam('prenom',$_POST['lastname_user']);
+            $statement->bindParam('mdp',$_POST['password_user']);
+            $statement->bindParam('tel',$_POST['phone_user']);
+            $statement->execute();
+            
+           echo  "l'utilisateur '" .$_POST['lastname_user']. " a bien été ajoutée <br><br>";
+
+           
+           
+           $db = null;
+        } catch (PDOException $e) {
+            die('echec :' . $e->getMessage());
+        }
+        }
+        
+        else{
+            echo 'inscription raté veuillez recommencer';
+        }
+        ?>
+    </body>
+</html>
