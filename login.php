@@ -11,7 +11,7 @@
         require 'connect.php';
         try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
-            $sql = 'SELECT password_user , nickname_user 
+            $sql = 'SELECT password_user , nickname_user,code_role
                     FROM RF_USER
                     WHERE nickname_user= :nck';
             $statement = $db->prepare($sql);
@@ -26,6 +26,17 @@
             else {
                 echo 'Identifiant ou mot de passe incorrect';
             }
+
+            if ($row['code_role']=='U'){
+                echo 'est un utilisateur ';
+            }else{
+                echo 'est un admin';
+            }
+
+
+
+
+
             
             $statement->closeCursor();
             $db = null;
