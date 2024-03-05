@@ -11,7 +11,7 @@
         require 'connect.php';
         try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
-            $sql = 'SELECT password_user , nickname_user,code_role
+            $sql = 'SELECT password_user , nickname_user,code_role,firstname_user,lastname_user
                     FROM RF_USER
                     WHERE nickname_user= :nck';
             $statement = $db->prepare($sql);
@@ -21,7 +21,7 @@
             $row = $statement->fetch();
             
             if(password_verify($_POST['password'], $row['password_user'])){
-                echo 'Connexion réussie';
+                echo 'Bienvenue '.$row['firstname_user'].' '.$row['lastname_user'];
             }
             else {
                 echo 'Identifiant ou mot de passe incorrect';
@@ -29,8 +29,28 @@
 
             if ($row['code_role']=='U'){
                 echo ' est un utilisateur ';
+
+
+
+
+
+
+
+
+
+
+
+
+
             }else{
-                echo ' est un admin';
+
+                echo "<a href='track.php'>Pour voir toutes les musiques</a>";
+                echo "<a href='ajout_music.php'>Pour rajouter des musiques</a>";
+                echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a>";
+                echo "<a href='playlist_add.php'>Pour rajouter des playlists</a>";
+                echo "<a href='user_list.php'>Pour voir tous les utisateurs</a>";
+                
+
             }
 
 
