@@ -18,6 +18,14 @@
             $statement->bindParam('fil', $_POST['fichier']);
             $pas="music/".$_POST['fichier'];
             $statement->bindParam('pass', $pas);
+
+            $currentLocation = "Téléchargements/".$_POST['fichier'];
+            $newLocation = "/public_html/music/".$_POST['fichier'];
+            $moved = rename($currentLocation, $newLocation);
+            if($moved)
+            {
+                echo "File moved successfully";
+            }
             
             $statement->execute();
 
