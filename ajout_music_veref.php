@@ -19,12 +19,15 @@
             $pas="music/".$_POST['fichier'];
             $statement->bindParam('pass', $pas);
 
-            $currentLocation = "/home/carlierm/Téléchargements/".$_POST['fichier'];
-            $newLocation = "../home/00_projets/metallica/public_html/music/".$_POST['fichier'];
-            $moved = rename($currentLocation, $newLocation);
-            if($moved)
-            {
-                echo "File moved successfully";
+            $uploads_dir = '/uploads';
+            foreach ($_FILES["pictures"]["error"] as $key => $error) {
+                if ($error == UPLOAD_ERR_OK) {
+                    $tmp_name = $_FILES["pictures"]["tmp_name"][$key];
+                    // basename() peut empêcher les attaques de système de fichiers;
+                    // la validation/assainissement supplémentaire du nom de fichier peut être approprié
+                    $name = basename($_FILES["pictures"]["name"][$key]);
+                    move_uploaded_file($tmp_name, "$uploads_dir/$name");
+                }
             }
             
             $statement->execute();
