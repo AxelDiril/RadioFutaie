@@ -32,7 +32,7 @@
         } catch (PDOException $e) {
             die('echec :' . $e->getMessage());
         }
-        }else {
+        }else { 
             echo 'Le libellé doit être saisie !';
             echo "<a href='sign_in.php'>Retour à l'insersion</a>";
         }
