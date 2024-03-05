@@ -37,6 +37,6 @@
             echo "<a href='sign_in.php'>Retour à l'insersion</a>";
         }
         ?>
-    <em>&copy; 2024</em>
+    <br><em>&copy; 2024</em>
 </body>
 </html>
