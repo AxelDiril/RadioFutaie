@@ -4,8 +4,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Suppression d'une musique</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
+
+        <h1>Suppression d'une musique</h1>
+
         <?php
         require 'connect.php';
 
@@ -16,19 +20,18 @@
             
             $statement->bindParam('id', $_GET['id']);
             
-            //Condition ternaire
-            //$var = (condition)?valeurVraie:valeurFaux
-            
             $statement->execute();
             
-            echo "La musique a bien été supprimé.";
+            echo "La musique a bien été supprimée.<br><br>";
 
             }
             else{
 
-                echo "Aucun musique a été choisi.";
+                echo "Aucun musique n'a été choisie.<br><br>";
 
             }
+
+            echo "<a href='track_list.php'>Retour à la liste des musiques</a>";
         
         ?>
     </body>

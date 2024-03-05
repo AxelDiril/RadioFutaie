@@ -2,6 +2,7 @@
 <html lang=fr>
 <head>
     <title>Connexion</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <h1>Connexion</h1>
@@ -13,6 +14,8 @@
         <input type="password" id="idpassword" name="password">
         <input type="submit">
     </form>
+
+    <a href='user_add.php'>S'inscrire</a>
 
     <?php
         session_start();

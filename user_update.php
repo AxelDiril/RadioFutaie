@@ -2,13 +2,14 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>titre 2</title>
+        <title>Mise à jour de l'utilisateur</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <h1>Utilisateur</h1><br>bienvenue sur Radio Futaie<br>
+        <h1>Mise à jour de l'utilisateur</h1>
         <?php
         
-require 'connect.php';
+        require 'connect.php';
         if ((!empty($_POST['email_user']))AND(!empty($_POST['nickname_user']))AND(!empty($_POST['lastname_user']))AND(!empty($_POST['password_user']))AND(!empty($_POST['phone_user']))AND(!empty($_POST['id_user']))){
             try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
@@ -24,7 +25,7 @@ require 'connect.php';
             $statement->bindParam('id',$_POST['id_user']);
             $statement->execute();
             
-           echo  "l'utilisateur " .$_POST['lastname_user']. " a bien été modifié <br><br>";
+           echo  "L'utilisateur " .$_POST['lastname_user']. " a bien été modifié <br><br>";
 
             
            
@@ -35,9 +36,12 @@ require 'connect.php';
     
         }
         else{
-            echo 'modification raté veuillez recommencer';
-            
+            echo 'Veuillez remplir tous les champs pour modifier cet utilisateur.<br><br>';
         }
+
+            echo "<a href='user_list.php'>Retour à la suppression d'une musique</a>";
+
         ?>
+
     </body>
 </html>

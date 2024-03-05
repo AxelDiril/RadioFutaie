@@ -4,8 +4,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Suppression d'une playlist</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
+
+        <h1>Suppression d'une musique</h1>
+
         <?php
         require 'connect.php';
 
@@ -18,14 +22,16 @@
             $statement->bindParam('id', $_GET['id']);
             $statement->execute();
             
-            echo "La playlist a bien été supprimée.";
+            echo "La playlist a bien été supprimée.<br><br>";
 
             }
             else{
 
-                echo "Aucune playlist a été choisie .";
+                echo "Aucune playlist n'a été choisie.<br><br>";
 
             }
+
+            echo "<a href='playlist_list.php'>Retour à la suppression d'une playlist</a>"
         
         ?>
     </body>

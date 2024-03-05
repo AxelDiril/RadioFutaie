@@ -1,10 +1,11 @@
 <!doctype html>
 <html>
 <head>
-    <title>Succès</title>
+    <title>Ajout d'une playlist</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-        <h1>Succès</h1>
+        <h1>Ajout d'une playlist</h1>
 
         <?php
 
@@ -29,14 +30,12 @@
         }
         }
         else {
-            echo 'Les deux libellés doivent être saisis ! <br><br> ';
+            echo 'Veuillez remplir tous les champs pour ajouter une musique.<br><br> ';
         }
         ?>
 
-        <ul>
-        <li><a href="playlist_add.php">Retour à l'ajout d'une playlist</a></li>
-        <li><a href="playlist_list.php">Retour à la liste</a></li> 
-        </ul>
+        <a href="playlist_add.php">Retour à l'ajout d'une playlist</a><br>
+        <a href="playlist_list.php">Retour à la liste des playlists</a>
 
 </body>
 </html>

@@ -1,13 +1,14 @@
 <!doctype html>
 <html>
 <head>
-    <title>ajout</title>
+    <title>Ajout d'une musique</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-    <h1>ajout user</h1>
+    <h1>Ajouter une musique</h1>
 
-    <form action="ajout_music_veref.php" method="post" >
+    <form action="track_insert.php" method="post" >
 
         <label for="titre">Titre :</label>
         <input type="text" name='titre' required><br>
@@ -17,7 +18,5 @@
         <input type="submit" value="Inserer">
         
     </form>
-    
-    <em>&copy; 2024</em>
 </body>
 </html>

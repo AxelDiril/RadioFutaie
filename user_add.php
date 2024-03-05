@@ -1,9 +1,13 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Inscription</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
+
+        <h1>Inscription</h1>
+
         <form action="user_insert.php" method="POST"> 
 
        <!--required oblige a ecrire une donnée-->
@@ -23,25 +27,17 @@
        <input type="text" id="lastname_user" name="lastname_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
     
-       <label for="password_user">mot de passe de l'utilisateur</label>
-       <input type="text" id="password_user" name="password_user"
+       <label for="password_user">Mot de passe de l'utilisateur</label>
+       <input type="password" id="password_user" name="password_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
     
-       <label for="phone_user">téléphone de l'utilisateur</label>
+       <label for="phone_user">Téléphone de l'utilisateur</label>
        <input type="text" id="phone_user" name="phone_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
 
-    </textarea>
+    <input type="submit" value="Valider">
 
 
- <div>
-    <button type="submit">Envoyer</button>
-            
-  </div>
-
-        </form>
-        <?php
-
-        ?>
+    </form>
     </body>
 </html>

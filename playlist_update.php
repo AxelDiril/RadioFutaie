@@ -2,7 +2,8 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Update</title>
+        <title>Mise à jour d'une playlist</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
      
@@ -17,7 +18,7 @@
 
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
             $sql = 'UPDATE RF_PLAYLIST (name_playlist, datetime_playlist)
-                    VALUES (:titre, :date'
+                    VALUES (:titre, :date)'
                     WHERE id_user=:id)';
                 
             $statement = $db->prepare($sql);

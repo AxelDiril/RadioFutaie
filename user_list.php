@@ -2,6 +2,7 @@
 <html lang=fr>
 <head>
     <title>Liste des utilisateurs</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <h1>Liste des utilisateurs</h1>

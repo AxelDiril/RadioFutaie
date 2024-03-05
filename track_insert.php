@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html >
     <head>
-
-        <title>veref</title>
+        <title>Ajout d'une musique</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <h1></h1><br><br>
+
+        <h1>Ajout d'une musique</h1>
+        
         <?php
         if (!empty($_POST['titre'])) {
         require 'connect.php';
@@ -22,7 +24,7 @@
             $statement->execute();
 
             echo '<label>La musique ' . $_POST['titre'] . ' a bien été ajoutée</label><br><br>';
-            echo "<a href='ajout_music.php'>Retour à l'index</a>";
+            echo "<a href='track_list.php'>Retour à l'index</a>";
             
             $statement->closeCursor();
             $db = null;
@@ -30,10 +32,9 @@
             die('echec :' . $e->getMessage());
         }
         }else {
-            echo 'Le libellé doit être saisie !';
-            echo "<a href='ajout_music.php'>Retour à l'insersion</a>";
+            echo 'Le formulaire doit être entièrement rempli pour ajouter une musique.<br><br>';
+            echo "<a href='track_add.php'>Retour à l'ajout d'une musique</a>";
         }
         ?>
-    <em>&copy; 2024</em>
 </body>
 </html>

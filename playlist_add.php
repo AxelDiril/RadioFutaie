@@ -1,11 +1,12 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Ajout d'une playlist</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
 
-        <h1>Ajout d'une playlist </h1>
+        <h1>Ajout d'une playlist</h1>
 
         <form action="playlist_insert.php" method="post">
 
@@ -14,9 +15,8 @@
         
             <label for='date'>Date & Heure : </label>
             <input type="datetime-local" id="datetime" name="datetime" required><br><br> 
-    
 
-            <input type='submit' value='valider'><br><br> 
+            <input type='submit' value='Générer'>
             
             </form>
      </body>

@@ -1,23 +1,21 @@
 <!doctype html>
 <html>
 <head>
-    <title>track</title>
+    <title>Liste des musiques</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>track</h1>
+    <h1>Liste des musiques</h1>
         
 
     <table>
         <tr>
-            <th>titre</th>
-                <th>|</th>
-                <th>filname</th>
-                <th>|</th>
-                <th>pathname</th>
-                <th>|</th>
-                <th>total</th>
-                <th>|</th>
-                <th>nb</th>
+            <th>Titre</th>
+            <th>Nom du fichier</th>
+            <th>Chemin d'accès</th>
+            <th>Total de votes</th>
+            <th>Nombre de votes</th>
+            <th>Action</th>
         </tr>
 
         <?php
@@ -31,15 +29,10 @@
                 foreach($statement as $row){
                     echo '<tr>';
                     echo '<td>'.$row['name_track'].'</td>';
-                    echo'<td>|</td>';
                     echo '<td>'.$row['filename_track'].'</td>';
-                    echo'<td>|</td>';
                     echo '<td>'.$row['pathname_track'].'</td>';
-                    echo'<td>|</td>';
                     echo '<td>'.$row['total_votes'].'</td>';
-                    echo'<td>|</td>';
                     echo '<td>'.$row['nb_votes'].'</td>';
-                    echo'<td>|</td>';
                     echo '<td><a href="track_delete.php?id='.$row['id_track'].'">Supprimer</a><br>';
                     echo '</tr>';
                 }
@@ -51,8 +44,5 @@
             
         ?>
     </table>
-        <br>
-        <br>
-    <em>&copy; 2024</em>
 </body>
 </html>

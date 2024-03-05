@@ -1,16 +1,17 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>Mise à jour d'un utilisateur</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
         <form action="user_update.php" method="POST"> 
 
        <!--required oblige a ecrire une donnée-->
  
-    <label for="lastname_user">selectionnez la personne a modifié :</label>
+    <label for="lastname_user">Sélectionnez la personne à modifier :</label>
         <select name="lastname_user" id="lastname_user">
-        <option value=""> choisissez la personne a modifié</option>
+        <option value=""> Choisissez la personne à modifier</option>
        <?php
        require 'connect.php';
        
@@ -45,19 +46,16 @@
        <input type="text" id="lastname_user" name="lastname_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
     
-       <label for="password_user">mot de passe de l'utilisateur</label>
-       <input type="text" id="password_user" name="password_user"
+       <label for="password_user">Mot de passe de l'utilisateur</label>
+       <input type="password" id="password_user" name="password_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
     
-       <label for="phone_user">téléphone de l'utilisateur</label>
+       <label for="phone_user">Téléphone de l'utilisateur</label>
        <input type="text" id="phone_user" name="phone_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
 
-        <input type="submit">Envoyer</input>
+        <input type="submit" value="Valider">
 
     </form>
-        <?php
-
-        ?>
     </body>
 </html>

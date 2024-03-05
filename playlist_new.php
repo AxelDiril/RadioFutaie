@@ -2,6 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Modification d'une playlist</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
 
@@ -9,9 +10,9 @@
 
        
  
-    <label for="id_playlist"> selectionnez la playlist a modifié :</label>
+    <label for="id_playlist"> Sélectionnez la playlist à modifier :</label>
         <select name="id_playlist" id="id_playlist">
-        <option value=""> choisissez la playlist a modifié</option>
+        <option value=""> Choisissez la playlist à modifier</option>
 
        <?php
        require 'connect.php';

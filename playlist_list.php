@@ -3,38 +3,17 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Playlist</title>
-        <style>
-
-table
-{
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-
-th
-{
-	border: 1px solid black;
-	color: black;
-    	padding: 5px; 
-}
-td
-{
-	border: 1px solid black;
-    	padding: 5px;
-		text-align:center;
-}
-
-</style>
+        <title>Liste des playlists</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-       
+
     <table>
         <tr>
-            <th> Identifiant </th>
-            <th> Titre </th>
-            <th> Date & Heure </th>
-            <th> Action </th>
+            <th>Identifiant</th>
+            <th>Titre </th>
+            <th>Date & Heure</th>
+            <th>Action</th>
         </tr>
     
 
@@ -59,8 +38,8 @@ td
                     echo '</tr>';
                 }
              
-            echo '<h1> Liste des playlists '. "</h1><br>";
-            echo '<h2> Nombre : '.$statement->rowCount().'</h2><br>';
+            echo '<h1> Liste des playlists '. "</h1>";
+            echo '<h2> Nombre : '.$statement->rowCount().'</h2>';
             
             $statement->closeCursor();
             

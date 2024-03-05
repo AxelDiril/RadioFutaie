@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Suppression d'un utilisateur</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
         <?php
@@ -21,15 +22,16 @@
             
             $statement->execute();
             
-            echo "L'utilisateur a bien été supprimé.";
+            echo "L'utilisateur a bien été supprimé.<br><br>";
 
             }
             else{
 
-                echo "Aucun utilisateur a été choisi.";
+                echo "Aucun utilisateur a été choisi.<br><br>";
 
             }
         
+            echo "<a href='user_list.php'>Retour à la liste des utilisateurs</a>";
         ?>
     </body>
 </html>

@@ -2,10 +2,11 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>titre 2</title>
+        <title>Inscription</title>
+        <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <h1>Utilisateur</h1><br>bienvenue sur Radio Futaie<br>
+        <h1>Utilisateur : </h1><br>Bienvenue sur Radio Futaie !<br>
         <?php
 
 require 'connect.php';
@@ -24,10 +25,8 @@ require 'connect.php';
             $statement->bindParam('tel',$_POST['phone_user']);
             $statement->execute();
             
-           echo  "l'utilisateur '" .$_POST['lastname_user']. " a bien été ajoutée <br><br>";
+           echo  "Votre compte a bien été créé. Vous pouvez désormais vous connecter sur la page principale.<br><br>";
 
-           
-           
            $db = null;
         } catch (PDOException $e) {
             die('echec :' . $e->getMessage());
@@ -35,8 +34,11 @@ require 'connect.php';
         }
         
         else{
-            echo 'inscription raté veuillez recommencer';
+            echo "Echec de l'inscription. Veuillez remplir tous les champs.<br><br>";
+
         }
         ?>
+
+        <a href='index.php'>Retour à la page principale</a>;
     </body>
 </html>
