@@ -7,13 +7,6 @@ $statement->execute();
 $row=$statement->fetch();
 echo $row['pathname_track'];
 echo '<audio src=../'.$row["pathname_track"]. ' controls> </audio>';	
+
 ?> 
 
-<embed name="music_playlist"
-    src="/music/remi_test.m3u"
-    width="300"
-    height="90"
-    loop="false"
-    hidden="false"
-    autostart="true">
-    </embed>
