@@ -63,26 +63,6 @@
                 } catch (PDOException $e) {
                     die('echec :' . $e->getMessage());
                 }
-            }else if($_SESSION['login']!=NULL){
-                if ($row['code_role']=='U'){
-
-                    // Utilisateur
-
-                    echo ' est un utilisateur ';
-
-                }else{
-
-                    //Admnistrateur
-
-                    echo "<br><a href='track_list.php'>Pour voir toutes les musiques</a><br>";
-                    echo "<a href='track_add.php'>Pour rajouter des musiques</a><br>";
-                    echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a><br>";
-                    echo "<a href='playlist_add.php'>Pour rajouter des playlists</a><br>";
-                    echo "<a href='user_list.php'>Pour voir tous les utisateurs</a><br>";
-                    
-                    //Si l'utilisateur est un administrateur, $_SESSION['admin'] est complété
-                    $_SESSION['admin'] = "A";
-                    }
             }else{
                 echo "Votre Login et mot de passe doivent être renseignés afin d'accéder à cette page.<br><br>";
                     echo "<a href='index.php'>Retour à la page de connexion</a>";
