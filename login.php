@@ -41,6 +41,7 @@
                         // Utilisateur
 
                         echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a><br>";
+                        $_SESSION['admin'] = 'U';
 
                     }else{
 
@@ -70,13 +71,19 @@
                 } catch (PDOException $e) {
                     die('echec :' . $e->getMessage());
                 }
-            }else if(isset($_SESSION['admin'])){
+            }else if($_SESSION['admin']=='A'){
                         echo "<br><a href='track_list.php'>Pour voir toutes les musiques</a><br>";
                         echo "<a href='track_add.php'>Pour rajouter des musiques</a><br>";
                         echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a><br>";
                         echo "<a href='playlist_add.php'>Pour rajouter des playlists</a><br>";
                         echo "<a href='user_list.php'>Pour voir tous les utisateurs</a><br>";
+            }else if($_SESSION['admin']=='U'){
+            
+                        echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a><br>";
+            
             }
+
+
             
             
             
