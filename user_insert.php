@@ -35,7 +35,7 @@ require 'connect.php';
             $statement->execute();
             
            echo  "Votre compte a bien été créé. Vous pouvez désormais vous connecter sur la page principale.<br><br>";
-
+           $statement->closeCursor();
            $db = null;
         } catch (PDOException $e) {
             die('echec :' . $e->getMessage());
