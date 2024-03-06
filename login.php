@@ -9,11 +9,12 @@
         <h1>Accueil</h1>
 
         <?php
+            session_start(); //Création de la session
 
             if (!empty($_POST['login']) or !empty($_POST['password']) ) {
                 require 'connect.php';
                 try {
-                    session_start(); //Création de la session
+
 
                     $db = new PDO(DNS, LOGIN, PASSWORD, $options);
                     $sql = 'SELECT password_user , nickname_user,code_role,firstname_user,lastname_user
@@ -63,8 +64,8 @@
                 } catch (PDOException $e) {
                     die('echec :' . $e->getMessage());
                 }
-            }else if($_SESSION['login']!=NULL){
-                echo "<br><a href='track_list.php'>Pour voir toutes les musiques</a><br>";
+            }else if(isset($_SESSION['login'])){
+                        echo "<br><a href='track_list.php'>Pour voir toutes les musiques</a><br>";
                         echo "<a href='track_add.php'>Pour rajouter des musiques</a><br>";
                         echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a><br>";
                         echo "<a href='playlist_add.php'>Pour rajouter des playlists</a><br>";
