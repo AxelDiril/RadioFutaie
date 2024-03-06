@@ -7,7 +7,7 @@
     <body>
 
         <h1>Accueil</h1>
-
+        <h1> RadioFutaie : Votre univers musical personnel </h1>
         <?php
         if (!empty($_POST['login']) or !empty($_POST['password'])) {
         require 'connect.php';
@@ -64,5 +64,7 @@
             echo "<a href='index.php'>Retour à la page de connexion</a>";
         }
         ?>
+
+
 </body>
 </html>
