@@ -41,7 +41,7 @@
 
                 //Admnistrateur
 
-                echo "<a href='track_list.php'>Pour voir toutes les musiques</a><br>";
+                echo "<br><a href='track_list.php'>Pour voir toutes les musiques</a><br>";
                 echo "<a href='track_add.php'>Pour rajouter des musiques</a><br>";
                 echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a><br>";
                 echo "<a href='playlist_add.php'>Pour rajouter des playlists</a><br>";
