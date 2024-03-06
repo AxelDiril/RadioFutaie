@@ -5,7 +5,12 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-
+    <header>
+        <nav>
+                <a href="contact.php" class="btn">Nous contacter</a>
+                <a href="index.php" class="btn">Connexion</a>
+        </nav>
+    </header>
         <h1>Inscription</h1>
 
         <form action="user_insert.php" method="POST"> 
@@ -39,5 +44,10 @@
 
 
     </form>
+    <footer>
+    <p>&copy; 2024 RadioFutaie </p>
+      <p>Tous droits sont réservés</p>
+    
+<footer>
     </body>
 </html>

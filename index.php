@@ -7,7 +7,6 @@
 <body>
 <header>
         <img src="images/logo.png" alt="Logo de RadioFutaie">
-        <h1>RadioFutaie</h1>
         <nav>
                 <a href="contact.php" class="btn">Nous contacter</a>
                 
