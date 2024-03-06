@@ -21,7 +21,7 @@
             echo '<a class="btn" href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/playlist_add.php">Pour rajouter des playlists</a>';
             echo '<a class="btn" href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/user_list.php">Pour voir tous les utilisateurs</a>';
         }
-    ?>
+    ?> 
  
 </header>
 

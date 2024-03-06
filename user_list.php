@@ -15,7 +15,7 @@
     <button class="btn" onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/playlist_add.php"'>Pour rajouter des playlists</button>
  
 </header>
-
+ 
 <?php
             //Vérifier si l'utilisateur est un administrateur connecté
             session_start();
