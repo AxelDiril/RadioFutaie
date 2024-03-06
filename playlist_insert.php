@@ -61,7 +61,7 @@
           }
       
           $statement->closeCursor();
-          $db->null;
+          $db = null;
       
           echo "La playlist " .$_POST['titre'].  " a bien été générée.<br><br>";
           

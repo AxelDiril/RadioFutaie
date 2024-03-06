@@ -74,7 +74,7 @@
            
         ?>
     </table>
-    </footer>
+    <footer>
         <p>&copy; 2024 RadioFutaie </p>
     </footer>
   </body>

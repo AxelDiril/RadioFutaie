@@ -27,7 +27,8 @@
                   $statement->bindParam('surnom',$_POST['nickname_user']);
                   $statement->bindParam('nom',$_POST['firstname_user']);
                   $statement->bindParam('prenom',$_POST['lastname_user']);
-                  $statement->bindParam('mdp',$_POST['password_user']);
+                  $mdp = password_hash($_POST['password_user'], PASSWORD_BCRYPT);
+                  $statement->bindParam('mdp',$mdp);
                   $statement->bindParam('tel',$_POST['phone_user']);
                   $statement->execute();
                   

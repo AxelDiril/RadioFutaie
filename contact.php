@@ -49,7 +49,6 @@
 
   <footer>
     <p>&copy; 2024 RadioFutaie</p>
-    <p>Tous droits réservés</p>
   </footer>
 </body>
 </html>

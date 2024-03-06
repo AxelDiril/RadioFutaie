@@ -39,7 +39,7 @@
           
           $statement->execute();
           
-          $db->null;
+          $db = null;
           
           echo "La musique a bien été supprimée.<br><br>";
       
