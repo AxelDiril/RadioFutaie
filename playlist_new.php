@@ -6,10 +6,16 @@
     </head>
     <body>
 
-        <form action="playlist_update.php" method="POST"> 
+    <?php
+            //Vérifier si l'utilisateur est un administrateur connecté
+            session_start();
+            if($_SESSION['admin']==NULL){
+                header('Location: index.php');
+            }
+        ?>
+    
+    <form action="playlist_update.php" method="POST"> 
 
-       
- 
     <label for="id_playlist"> Sélectionnez la playlist à modifier :</label>
         <select name="id_playlist" id="id_playlist">
         <option value=""> Choisissez la playlist à modifier</option>

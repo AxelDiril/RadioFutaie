@@ -16,8 +16,4 @@
     </form>
 
     <a href='user_add.php'>S'inscrire</a>
-
-    <?php
-        session_start();
-    ?>
 </body>

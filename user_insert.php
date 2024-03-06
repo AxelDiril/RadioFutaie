@@ -6,11 +6,20 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <h1>Utilisateur : </h1><br>Bienvenue sur Radio Futaie !<br>
+
+    <?php
+            //Vérifier si l'utilisateur est un administrateur connecté
+            session_start();
+            if($_SESSION['admin']==NULL){
+                header('Location: index.php');
+            }
+        ?>
+
+        <h1>Inscription</h1>
+        
         <?php
 
 require 'connect.php';
-        print_r($_POST);
         if ((!empty($_POST['email_user']))AND(!empty($_POST['nickname_user']))AND(!empty($_POST['lastname_user']))AND(!empty($_POST['password_user']))AND(!empty($_POST['phone_user']))){
             try {
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
@@ -39,6 +48,6 @@ require 'connect.php';
         }
         ?>
 
-        <a href='index.php'>Retour à la page principale</a>;
+        <a href='index.php'>Retour à la page principale</a>
     </body>
 </html>

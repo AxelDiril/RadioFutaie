@@ -5,6 +5,15 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
+<?php
+            //Vérifier si l'utilisateur est un administrateur connecté
+            session_start();
+            if($_SESSION['admin']==NULL){
+                header('Location: index.php');
+            }
+        ?>
+
     <h1>Liste des utilisateurs</h1>
     <table>
         <tr>

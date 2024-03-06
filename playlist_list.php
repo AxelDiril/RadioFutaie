@@ -8,6 +8,14 @@
     </head>
     <body>
 
+    <?php
+            //Vérifier si l'utilisateur est connecté (utilisateur simple ou administrateur)
+            session_start();
+            if($_SESSION['login']==NULL){
+                header('Location: index.php');
+            }
+        ?>
+
     <table>
         <tr>
             <th>Identifiant</th>
@@ -33,8 +41,13 @@
                     echo '<td>'.$row['id_playlist'].'</td>';
                     echo '<td>'.$row['name_playlist'].'</td>';
                     echo '<td>'.$row['datetime_playlist'].'</td>';
-                    echo '<td><a href="playlist_delete.php?id='.$row['id_playlist'].'">Supprimer</a><br>';
-                    echo '<a href="playlist_update.php?id='.$row['id_playlist'].'">Modifier</a><br>';
+                    echo '<td><a href="music_player.php?id='.$row['id_playlist'].'">Lire</a><br>';
+
+                    //Rajouter l'option de suppression de playlist si l'utilisateur est un administrateur
+                    if(isset($_SESSION['admin'])){
+                        echo '<a href="playlist_delete.php?id='.$row['id_playlist'].'">Supprimer</a>';
+                    }
+                    echo '</td>';
                     echo '</tr>';
                 }
              

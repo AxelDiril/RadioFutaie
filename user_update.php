@@ -6,6 +6,15 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
+
+    <?php
+            //Vérifier si l'utilisateur est un administrateur connecté
+            session_start();
+            if($_SESSION['admin']==NULL){
+                header('Location: index.php');
+            }
+        ?>
+
         <h1>Mise à jour de l'utilisateur</h1>
         <?php
         

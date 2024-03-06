@@ -12,6 +12,8 @@
         if (!empty($_POST['login']) or !empty($_POST['password'])) {
         require 'connect.php';
         try {
+            session_start(); //Création de la session
+
             $db = new PDO(DNS, LOGIN, PASSWORD, $options);
             $sql = 'SELECT password_user , nickname_user,code_role,firstname_user,lastname_user
                     FROM RF_USER
@@ -39,14 +41,19 @@
 
                 //Admnistrateur
 
-                echo "<br><a href='track_list.php'>Pour voir toutes les musiques</a>";
-                echo "<br><a href='track_add.php'>Pour rajouter des musiques</a>";
-                echo "<br><a href='playlist_list.php'>Pour voir toutes les playlists</a>";
-                echo "<br><a href='playlist_add.php'>Pour rajouter des playlists</a>";
-                echo "<br><a href='user_list.php'>Pour voir tous les utisateurs</a>";
+                echo "<a href='track_list.php'>Pour voir toutes les musiques</a><br>";
+                echo "<a href='track_add.php'>Pour rajouter des musiques</a><br>";
+                echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a><br>";
+                echo "<a href='playlist_add.php'>Pour rajouter des playlists</a><br>";
+                echo "<a href='user_list.php'>Pour voir tous les utisateurs</a><br>";
                 
-
+                //Si l'utilisateur est un administrateur, $_SESSION['admin'] est complété
+                $_SESSION['admin'] = "A";
             }
+
+            //Création d'une session utilisateur
+            $_SESSION['login'] = $_POST['login'];
+
             $statement->closeCursor();
             $db = null;
         } catch (PDOException $e) {
@@ -56,10 +63,6 @@
             echo "Votre Login et mot de passe doivent être renseignés afin d'accéder à cette page.<br><br>";
             echo "<a href='index.php'>Retour à la page de connexion</a>";
         }
-
-
-        $_SESSION['login'] = $_POST['login'];
-        echo $_SESSION['login'];
         ?>
 </body>
 </html>

@@ -8,6 +8,14 @@
     </head>
     <body>
 
+    <?php
+            //Vérifier si l'utilisateur est un administrateur connecté
+            session_start();
+            if($_SESSION['admin']==NULL){
+                header('Location: index.php');
+            }
+        ?>
+
         <h1>Suppression d'une musique</h1>
 
         <?php

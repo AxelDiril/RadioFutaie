@@ -5,6 +5,15 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
+
+    <?php
+            //Vérifier si l'utilisateur est un administrateur connecté
+            session_start();
+            if($_SESSION['admin']==NULL){
+                header('Location: index.php');
+            }
+        ?>
+
         <form action="user_update.php" method="POST"> 
 
        <!--required oblige a ecrire une donnée-->

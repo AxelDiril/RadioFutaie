@@ -6,6 +6,14 @@
 </head>
 <body>
 
+    <?php
+            //Vérifier si l'utilisateur est un administrateur connecté
+            session_start();
+            if($_SESSION['admin']==NULL){
+                header('Location: index.php');
+            }
+        ?>
+
     <h1>Ajouter une musique</h1>
 
     <form action="track_insert.php" method="post" >
