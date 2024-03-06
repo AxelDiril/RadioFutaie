@@ -64,7 +64,7 @@
                 } catch (PDOException $e) {
                     die('echec :' . $e->getMessage());
                 }
-            }else if(isset($_SESSION['login'])){
+            }else if(isset($_SESSION['admin'])){
                         echo "<br><a href='track_list.php'>Pour voir toutes les musiques</a><br>";
                         echo "<a href='track_add.php'>Pour rajouter des musiques</a><br>";
                         echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a><br>";
