@@ -50,6 +50,7 @@
         }
         else {
             echo 'Identifiant ou mot de passe incorrect <br><br>';
+            echo "<a href='index.php'>Retour à la page de connexion</a>";
         }
 
             //Création d'une session utilisateur
