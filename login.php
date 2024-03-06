@@ -26,10 +26,7 @@
             
             if(password_verify($_POST['password'], $row['password_user'])){
                 echo 'Bienvenue '.$row['firstname_user'].' '.$row['lastname_user'];
-            }
-            else {
-                echo 'Identifiant ou mot de passe incorrect <br><br>';
-            }
+            
 
             if ($row['code_role']=='U'){
 
@@ -50,6 +47,10 @@
                 //Si l'utilisateur est un administrateur, $_SESSION['admin'] est complété
                 $_SESSION['admin'] = "A";
             }
+        }
+        else {
+            echo 'Identifiant ou mot de passe incorrect <br><br>';
+        }
 
             //Création d'une session utilisateur
             $_SESSION['login'] = $_POST['login'];
