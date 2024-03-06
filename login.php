@@ -10,7 +10,7 @@
 
         <?php
 
-            if (!empty($_POST['login']) or !empty($_POST['password']) and ($_SESSION['login']!=NULL)) {
+            if (!empty($_POST['login']) or !empty($_POST['password']) ) {
                 require 'connect.php';
                 try {
                     session_start(); //Création de la session
@@ -63,7 +63,17 @@
                 } catch (PDOException $e) {
                     die('echec :' . $e->getMessage());
                 }
-            }else{
+            }else if($_SESSION['login']!=NULL){
+                echo "<br><a href='track_list.php'>Pour voir toutes les musiques</a><br>";
+                        echo "<a href='track_add.php'>Pour rajouter des musiques</a><br>";
+                        echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a><br>";
+                        echo "<a href='playlist_add.php'>Pour rajouter des playlists</a><br>";
+                        echo "<a href='user_list.php'>Pour voir tous les utisateurs</a><br>";
+            }
+            
+            
+            
+            else{
                 echo "Votre Login et mot de passe doivent être renseignés afin d'accéder à cette page.<br><br>";
                     echo "<a href='index.php'>Retour à la page de connexion</a>";
             }
