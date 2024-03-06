@@ -6,6 +6,12 @@
     </head>
     <body>
 
+    <header>
+
+    <button onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/index.php"'>page de connexion</button>
+
+    </header>
+
         <h1>Accueil</h1>
 
         <?php
