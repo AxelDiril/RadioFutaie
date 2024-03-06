@@ -5,6 +5,12 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+<header>
+
+    <button onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/index.php"'>page de connexion</button>
+    <button onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/login.php"'>home</button>
+
+</header>
 
 <?php
             //Vérifier si l'utilisateur est un administrateur connecté
