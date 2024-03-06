@@ -9,27 +9,27 @@
     <body>
     <header>
 
-    <button onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/index.php"'>page de connexion</button>
-    <button onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/login.php"'>home</button>
+    <button class="btn" onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/index.php"'>Connexion</button>
+    <button class="btn" onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/login.php"'>Accueil</button>
     <?php
-     if($_SESSION['admin']=='A'){
-                    
-        echo `<button onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/track_list.php"'>Pour voir tous les musiques</button>`;
-        echo `<button onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/track_add.php"'>Pour rajouter des musiques</button>`;
-        echo `<button onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/playlist_add.php"'>Pour rajouter des playlists</button>`;
-        echo `<button onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/user_list.php"'>Pour voir tous les utilisateurs</button>`;
-    }
-?>
+    //Vérifier si l'utilisateur est connecté (utilisateur simple ou administrateur)
+    session_start();
+        if($_SESSION['admin']=='A'){
+
+            echo '<a class="btn" href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/track_list.php">Pour voir tous les musiques</a>';
+            echo '<a class="btn" href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/track_add.php">Pour rajouter des musiques</a>';
+            echo '<a class="btn" href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/playlist_add.php">Pour rajouter des playlists</a>';
+            echo '<a class="btn" href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/user_list.php">Pour voir tous les utilisateurs</a>';
+        }
+    ?>
  
 </header>
 
-    <?php
-            //Vérifier si l'utilisateur est connecté (utilisateur simple ou administrateur)
-            session_start();
-            if($_SESSION['login']==NULL){
+        <?php
+        if($_SESSION['login']==NULL){
                 header('Location: index.php');
             }
-        ?>
+            ?>    
 
     <table>
         <tr>
@@ -59,7 +59,7 @@
                     echo '<td><a href="music_player.php?id='.$row['id_playlist'].'">Lire</a><br>';
 
                     //Rajouter l'option de suppression de playlist si l'utilisateur est un administrateur
-                    if(isset($_SESSION['admin'])){
+                    if($_SESSION['admin']=='A'){
                         echo '<a href="playlist_delete.php?id='.$row['id_playlist'].'">Supprimer</a>';
                     }
                     echo '</td>';
