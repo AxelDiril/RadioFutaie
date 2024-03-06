@@ -10,7 +10,7 @@
 
         <?php
 
-            if (!empty($_POST['login']) or !empty($_POST['password'])) {
+            if (!empty($_POST['login']) or !empty($_POST['password']) and ($_SESSION['login']!=NULL)) {
                 require 'connect.php';
                 try {
                     session_start(); //Création de la session
