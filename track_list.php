@@ -9,6 +9,16 @@
 
     <button onclick="window.location.href = 'https://falbala.futaie.org:8443/~metallica/RadioFutaie/index.php';">page de connexion</button>
 
+    <?php
+    //Rajouter l'option de suppression de playlist si l'utilisateur est un administrateur
+                    if(isset($_SESSION['admin'])){
+                       // echo <button onclick="window.location.href = 'https://falbala.futaie.org:8443/~metallica/RadioFutaie/index.php';">page de connexion</button>;
+                    }
+                   
+                
+
+    ?>
+
 </header>
     <?php
             //Vérifier si l'utilisateur est un administrateur connecté
