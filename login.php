@@ -40,7 +40,7 @@
 
                         // Utilisateur
 
-                        echo ' est un utilisateur ';
+                        echo "<a href='playlist_list.php'>Pour voir toutes les playlists</a><br>";
 
                     }else{
 
