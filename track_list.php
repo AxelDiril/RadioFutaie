@@ -6,6 +6,21 @@
 </head>
 <body>
 
+<header>
+
+<button onclick="window.location.href = 'https://falbala.futaie.org:8443/~metallica/RadioFutaie/';">Cliquez Ici</button>
+
+</header>
+
+
+
+
+
+
+
+
+
+
     <?php
             //Vérifier si l'utilisateur est un administrateur connecté
             session_start();
