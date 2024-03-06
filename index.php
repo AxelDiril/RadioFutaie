@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
+
     <h1>Connexion</h1>
 
     <form action="login.php" method="POST">
