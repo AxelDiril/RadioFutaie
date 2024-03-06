@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
 <header>
         <img src="images/logo.png" alt="Logo de RadioFutaie">
         <nav>
@@ -12,6 +13,7 @@
                 
         </nav>
     </header>
+
     <h1>Connexion</h1>
 
     <form action="login.php" method="POST">
