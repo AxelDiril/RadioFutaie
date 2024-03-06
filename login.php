@@ -10,7 +10,7 @@
 
         <?php
 
-        if($_SESSION['login']!=NULL){
+        
             
         
         
@@ -70,7 +70,7 @@
         } catch (PDOException $e) {
             die('echec :' . $e->getMessage());
         }
-    }}else{
+    }else{
         echo "Votre Login et mot de passe doivent être renseignés afin d'accéder à cette page.<br><br>";
             echo "<a href='index.php'>Retour à la page de connexion</a>";
     }
