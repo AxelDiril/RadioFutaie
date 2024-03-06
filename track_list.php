@@ -6,24 +6,27 @@
 </head>
 <body>
 
-<header>
-
-    <button class="btn" onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/index.php"'>Connexion</button>
-    <button class="btn" onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/login.php"'>Accueil</button>
-    <button class="btn" onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/track_add.php"'>Pour rajouter des musiques</button>
-    <button class="btn" onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/playlist_list.php"'>Pour voir toutes les playlists</button>
-    <button class="btn" onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/playlist_add.php"'>Pour rajouter des playlists</button>
-    <button class="btn" onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/user_list.php"'>Pour voir tous les utilisateurs</button>
- 
-</header>
-  
     <?php
             //Vérifier si l'utilisateur est un administrateur connecté
             session_start();
-            if($_SESSION['admin']==NULL){
+            if($_SESSION['admin']!="A"){
                 header('Location: index.php');
             }
         ?>
+
+    <header>
+        <a href="index.php"><img src="images/logo.png" alt="Logo de RadioFutaie"></a>
+        <nav>
+                <a href="index.php" class="btn">Connexion</a>
+                <a href="login.php" class="btn">Accueil</a>
+                <a href="playlist_list.php" class="btn">Liste de playlists</a>
+                <a href="playlist_add.php" class="btn">Ajout de playlists</a>
+                <a href="track_list.php" class="btn">Liste de musiques</a>
+                <a href="track_add.php" class="btn">Ajout de musiques</a>
+                <a href="user_list.php" class="btn">Liste d'utilisateurs</a>
+                <a href="contact.php" class="btn">Nous contacter</a>
+        </nav>
+    </header>
 
     <h1>Liste des musiques</h1>
 
@@ -31,7 +34,6 @@
         <tr>
             <th>Titre</th>
             <th>Nom du fichier</th>
-            <th>Chemin d'accès</th>
             <th>Total de votes</th>
             <th>Nombre de votes</th>
             <th>Action</th>
@@ -49,19 +51,25 @@
                     echo '<tr>';
                     echo '<td>'.$row['name_track'].'</td>';
                     echo '<td>'.$row['filename_track'].'</td>';
-                    echo '<td>'.$row['pathname_track'].'</td>';
                     echo '<td>'.$row['total_votes'].'</td>';
                     echo '<td>'.$row['nb_votes'].'</td>';
                     echo '<td><a href="track_delete.php?id='.$row['id_track'].'">Supprimer</a><br>';
                     echo '</tr>';
                 }
+
                 $statement->closeCursor();
                 $db = null;
+
             } catch (PDOException $e) {
                 die('echec :' . $e->getMessage());
             }      
             
         ?>
     </table>
+    <footer>
+        <p>&copy; 2024 RadioFutaie </p>
+        <p>Tous droits sont réservés</p>
+    
+    </footer>
 </body>
 </html>
