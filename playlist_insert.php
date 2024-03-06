@@ -27,7 +27,8 @@
                     VALUES (:titre, :date)';
             $statement = $db->prepare($sql);
             $statement->bindParam('titre',$_POST['titre']);
-            $statement->bindParam('date',$_POST['datetime']); 
+            $date = date('Y/m/d h:i:s ', time());
+            $statement->bindParam('date',$date); 
             $statement->execute();
             
             echo "La playlist " .$_POST['titre'].  " a bien été ajoutée <br><br>";
