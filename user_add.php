@@ -5,33 +5,38 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-
+    <header>
+        <nav>
+                <a href="contact.php" class="btn">Nous contacter</a>
+                <a href="index.php" class="btn">Connexion</a>
+        </nav>
+    </header>
         <h1>Inscription</h1>
 
         <form action="user_insert.php" method="POST"> 
 
        <!--required oblige a ecrire une donnée-->
-       <label for="email_user">E-mail de l'utilisateur</label>
+       <label for="email_user">E-mail</label>
        <input type="email" id="email_user" name="email_user"
        required  minlength="3" maxlength="20" size="21"/><br><br>
        
-       <label for="nickname_user">Surnom de l'utilisateur</label>
+       <label for="nickname_user">Surnom</label>
        <input type="text" id="nickname_user" name="nickname_user"
        required  minlength="3" maxlength="20" size="21"/><br><br>
 
-       <label for="firstname_user">Nom de l'utilisateur</label>
+       <label for="firstname_user">Nom</label>
        <input type="text" id="firstname_user" name="firstname_user"
        required  minlength="3" maxlength="20" size="21"/><br><br>
 
-       <label for="lastname_user">Prénom de l'utilisateur</label>
+       <label for="lastname_user">Prénom</label>
        <input type="text" id="lastname_user" name="lastname_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
     
-       <label for="password_user">Mot de passe de l'utilisateur</label>
+       <label for="password_user">Mot de passe</label>
        <input type="password" id="password_user" name="password_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
     
-       <label for="phone_user">Téléphone de l'utilisateur</label>
+       <label for="phone_user">Téléphone</label>
        <input type="text" id="phone_user" name="phone_user"
        required  minlength="4" maxlength="20" size="21"/><br><br>
 
@@ -39,5 +44,10 @@
 
 
     </form>
+    <footer>
+    <p>&copy; 2024 RadioFutaie </p>
+      <p>Tous droits sont réservés</p>
+    
+<footer>
     </body>
 </html>

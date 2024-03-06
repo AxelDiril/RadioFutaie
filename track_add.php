@@ -25,8 +25,8 @@
                 header('Location: index.php');
             }
         ?>
-
-    <h1>Ajouter une musique</h1>
+    
+    <h2>Ajouter une musique</h2>
 
     <form action="track_insert.php" method="post" >
 

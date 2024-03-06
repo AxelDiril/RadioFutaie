@@ -16,9 +16,7 @@
     <button class="btn" onclick='window.location.href="https://falbala.futaie.org:8443/~metallica/RadioFutaie/user_list.php"'>Pour voir tous les utilisateurs</button>
  
 </header>
-
- 
-
+  
     <?php
             //Vérifier si l'utilisateur est un administrateur connecté
             session_start();

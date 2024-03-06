@@ -1,12 +1,74 @@
+
+header {
+    background-color: #9e0e40;
+    padding: 15px;
+    text-align: center;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+     
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color :#585d5f;   
+}
+
+img {
+    display: inline-block; 
+    margin-left: 20px; 
+    width: 90px; 
+    height: 90px; 
+    border-radius: 35%; 
+    background-image: url("images/logo.png"); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+  
+form {
+    width: 300px;
+    margin: auto;
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+  }
+  
+  .btn {
+    margin-left: 10px; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    background-color: #98a3a8; 
+  }
+   
+
 table {
     border: 1px solid black;
     border-collapse: collapse;
-    width: 100%;
-}
+    width: 30%;
+    margin: 0 auto;
+} 
 
 th, td {
     border: 1px solid black;
-    padding: 8px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -54,7 +116,7 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover { 
     background-color: #333; 
 }
 
@@ -75,4 +137,43 @@ input[type="file"] {
     border: 1px solid #000;
     border-radius: 3px;
     box-sizing: border-box; 
+}   
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #9e0e40;
+    text-decoration: none;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+  
+h2 {
+    text-align: center;
+}
+  
+p {
+    margin-bottom: 10px;
+}
+
+
+footer {
+    background-color:  #9e0e40;
+    padding: 2px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    color: #fff;
+    text-decoration: none;
+}
+  

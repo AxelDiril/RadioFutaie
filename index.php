@@ -6,6 +6,13 @@
 </head>
 <body>
 
+<header>
+        <img src="images/logo.png" alt="Logo de RadioFutaie">
+        <nav>
+                <a href="contact.php" class="btn">Nous contacter</a>
+                
+        </nav>
+    </header>
 
     <h1>Connexion</h1>
 
@@ -18,4 +25,12 @@
     </form>
 
     <a href='user_add.php'>S'inscrire</a>
-</body>
+
+
+<footer>
+    <p>&copy; 2024 RadioFutaie </p>
+      <p>Tous droits sont réservés</p>
+    
+<footer>
+</body> 
+</html>

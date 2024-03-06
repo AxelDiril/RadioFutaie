@@ -13,7 +13,7 @@
     </header>
 
         <h1>Accueil</h1>
-
+        <h1> RadioFutaie : Votre univers musical personnel </h1>
         <?php
             session_start(); //Création de la session
 
