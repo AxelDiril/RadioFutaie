@@ -33,8 +33,10 @@
       <input type="file" name='fichier' accept="audio/wav, audio/mpeg, audio/ogg" ><br><br>
       <input type="submit" value="Inserer">
     </form>
-    <footer>
-      <p>&copy; 2024 RadioFutaie </p>
-    </footer>
+    <div class=container>
+        <footer>
+            <p>&copy; 2024 RadioFutaie </p>
+        </footer>
+    </div>
   </body>
 </html>

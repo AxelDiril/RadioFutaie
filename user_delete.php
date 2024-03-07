@@ -52,8 +52,10 @@
       
           echo "<a href='user_list.php'>Retour à la liste des utilisateurs</a>";
       ?>
-    <footer>
-      <p>&copy; 2024 RadioFutaie </p>
-    </footer>
+    <div class=container>
+        <footer>
+            <p>&copy; 2024 RadioFutaie </p>
+        </footer>
+    </div>
   </body>
 </html>

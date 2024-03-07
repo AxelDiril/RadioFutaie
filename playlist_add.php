@@ -30,11 +30,13 @@
       <label for='titre'>Titre : </label>
       <input type='text' id='titre' name='titre' minlength="1" maxlength="255" size='50' required><br> 
       <label for='max'>Nombre de musiques à ajouter : </label>
-      <input type='number' id='max' name='max' required><br><br>
+      <input type='number' id='max' name='max' min="1" required><br><br>
       <input type='submit' value='Générer'>
     </form>
-    <footer>
-      <p>&copy; 2024 RadioFutaie </p>
-    </footer>
+    <div class=container>
+        <footer>
+            <p>&copy; 2024 RadioFutaie </p>
+        </footer>
+    </div>
   </body>
 </html>

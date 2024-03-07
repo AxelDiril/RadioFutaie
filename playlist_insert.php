@@ -51,8 +51,10 @@
           $statement = $db->prepare($sql3);
           $statement->execute();
           $id_track = $statement->fetch();
+
+          $max = min($statement->rowCount(), $_POST['max']);
       
-          for($i= 1;$i <= $_POST['max'];$i++){
+          for($i= 1;$i <= $max;$i++){
               $sql4 = 'INSERT INTO RF_CONTAIN VALUES (:id,"'.$id_track['id_track'].'",'.$i.')';
               $statement2 = $db->prepare($sql4);
               $statement2->bindParam("id",$id_playlist['id_playlist']);
@@ -76,9 +78,10 @@
       ?>
     <a href="playlist_add.php">Retour à l'ajout d'une playlist</a><br>
     <a href="playlist_list.php">Retour à la liste</a>
-    <footer>
-      <p>&copy; 2024 RadioFutaie </p>
-      <p>Tous droits sont réservés</p>
-    </footer>
+    <div class=container>
+        <footer>
+            <p>&copy; 2024 RadioFutaie </p>
+        </footer>
+    </div>
   </body>
 </html>

@@ -105,9 +105,10 @@
       }
       
       ?>
-    <footer>
-        <p>&copy; 2024 RadioFutaie </p>
-        <p>Tous droits sont réservés</p>
-    </footer>
+    <div class=container>
+        <footer>
+            <p>&copy; 2024 RadioFutaie </p>
+        </footer>
+    </div>
   </body>
 </html>

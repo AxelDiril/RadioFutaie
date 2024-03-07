@@ -44,7 +44,7 @@
           $statement->bindParam('id', $_GET['id']);
           $statement->execute();
       
-          $db->null;
+          $db = null;
           
           echo "La playlist a bien été supprimée.<br><br>";
       
@@ -58,8 +58,10 @@
           echo "<a href='playlist_list.php'>Retour à la suppression d'une playlist</a>"
       
       ?>
-    <footer>
-      <p>&copy; 2024 RadioFutaie </p>
-    </footer>
+    <div class=container>
+        <footer>
+            <p>&copy; 2024 RadioFutaie </p>
+        </footer>
+    </div>
   </body>
 </html>

@@ -36,8 +36,10 @@
         required  minlength="10" maxlength="10" size="21"/><br><br>
       <input type="submit" value="Valider">
     </form>
-    <footer>
-      <p>&copy; 2024 RadioFutaie </p>
-    </footer>
+    <div class=container>
+        <footer>
+            <p>&copy; 2024 RadioFutaie </p>
+        </footer>
+    </div>
   </body>
 </html>

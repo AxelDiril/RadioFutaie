@@ -80,8 +80,10 @@
     </script>
     <br>
     <p><a href="playlist_list.php">Retour à la liste des playlists</a></p>
-    <footer>
-      <p>&copy; 2024 RadioFutaie </p>
-    </footer>
+    <div class=container>
+        <footer>
+            <p>&copy; 2024 RadioFutaie </p>
+        </footer>
+    </div>
   </body>
 </html>
