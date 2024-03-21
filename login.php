@@ -8,7 +8,7 @@
 
     <header>
 
-    <button class="btn" onclick='window.location.href="https://falbala.futaie.org:4282/~carlierm/RadioFutaie-1/RadioFutaie/index.php"'>Connexion</button>
+    <button class="btn" onclick='window.location.href="falbala.futaie.org:4282/~carlierm/RadioFutaie/index.php"'>Connexion</button>
 
     </header>
 
