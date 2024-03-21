@@ -16,7 +16,7 @@
 
         <?php
             session_start(); //Création de la session
-
+            $_SESSION['admin'] = NULL;
             if (!empty($_POST['login']) or !empty($_POST['password']) ) {
                 require 'connect.php';
                 try {
